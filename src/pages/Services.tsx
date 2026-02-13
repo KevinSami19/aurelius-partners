@@ -13,7 +13,7 @@ import {
   CheckCircle,
 } from 'lucide-react';
 import { SEO } from '@/components/seo/SEO';
-import { Section, SectionLabel, SectionTitle, SectionDescription } from '@/components/ui/Section';
+import { Section, SectionLabel } from '@/components/ui/Section';
 import { Card } from '@/components/ui/Card';
 import { GradientMesh } from '@/components/ui/GradientMesh';
 import { staggerContainer, staggerItem } from '@/lib/animations';
