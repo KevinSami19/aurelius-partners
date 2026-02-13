@@ -33,19 +33,10 @@ jobs:
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
 
-      - name: Set base path
-        id: base
-        run: |
-          if [ -f public/CNAME ]; then
-            echo "base=/" >> $GITHUB_OUTPUT
-          else
-            echo "base=/${{ github.event.repository.name }}/" >> $GITHUB_OUTPUT
-          fi
-
       - name: Build
         run: npm run build
         env:
-          VITE_BASE: ${{ steps.base.outputs.base }}
+          VITE_BASE: /${{ github.event.repository.name }}/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
