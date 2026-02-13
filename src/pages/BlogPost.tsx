@@ -27,7 +27,7 @@ export default function BlogPost() {
     const flushList = () => {
       if (listItems.length > 0) {
         elements.push(
-          <ul key={`list-${elements.length}`} className="my-4 ml-6 list-disc space-y-1 dark:text-text-muted text-text-dark-muted">
+          <ul key={`list-${elements.length}`} className="my-4 ml-6 list-disc space-y-1 text-text-dark-muted-readable dark:text-text-muted-readable">
             {listItems.map((item, i) => (
               <li key={i}>{item}</li>
             ))}
@@ -68,7 +68,7 @@ export default function BlogPost() {
       } else if (trimmed.startsWith('*') && trimmed.endsWith('*')) {
         flushList();
         elements.push(
-          <p key={i} className="my-4 italic dark:text-text-muted text-text-dark-muted">
+          <p key={i} className="my-4 italic text-text-dark-muted-readable dark:text-text-muted-readable">
             {trimmed.replace(/^\*|\*$/g, '')}
           </p>,
         );
@@ -79,7 +79,7 @@ export default function BlogPost() {
         // Handle inline bold
         const parts = trimmed.split(/\*\*(.*?)\*\*/g);
         elements.push(
-          <p key={i} className="my-3 leading-relaxed dark:text-text-muted text-text-dark-muted">
+          <p key={i} className="my-3 leading-relaxed text-text-dark-muted-readable dark:text-text-muted-readable">
             {parts.map((part, j) =>
               j % 2 === 1 ? (
                 <strong key={j} className="font-semibold dark:text-text-primary text-text-dark">
@@ -132,7 +132,7 @@ export default function BlogPost() {
             {post.title}
           </h1>
 
-          <div className="mt-4 flex items-center gap-4 text-sm dark:text-text-muted text-text-dark-muted">
+          <div className="mt-4 flex items-center gap-4 text-sm text-text-dark-muted-readable dark:text-text-muted-readable">
             <span className="flex items-center gap-1.5">
               <Calendar size={14} /> {post.date}
             </span>
@@ -153,7 +153,7 @@ export default function BlogPost() {
             <h3 className="text-xl font-bold dark:text-text-primary text-text-dark">
               Want to apply these ideas to your agency?
             </h3>
-            <p className="mt-2 dark:text-text-muted text-text-dark-muted">
+            <p className="mt-2 text-text-dark-muted-readable dark:text-text-muted-readable">
               Book a free growth diagnostic and get a tailored plan for your staffing firm.
             </p>
             <Link
@@ -185,7 +185,7 @@ export default function BlogPost() {
                     <h4 className="mt-2 font-semibold dark:text-text-primary text-text-dark line-clamp-2">
                       {related.title}
                     </h4>
-                    <p className="mt-1 text-sm dark:text-text-muted text-text-dark-muted line-clamp-2">
+                    <p className="mt-1 text-sm text-text-dark-muted-readable dark:text-text-muted-readable line-clamp-2">
                       {related.description}
                     </p>
                   </Link>

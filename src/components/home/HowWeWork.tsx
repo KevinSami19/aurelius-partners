@@ -65,7 +65,7 @@ export function HowWeWork() {
         <SectionTitle className="mx-auto">
           Diagnose. Design. Deploy. Drive.
         </SectionTitle>
-        <p className="mx-auto mt-4 max-w-2xl text-lg dark:text-text-muted text-text-dark-muted">
+        <p className="mx-auto mt-4 max-w-2xl text-lg text-text-dark-muted-readable dark:text-text-muted-readable">
           Every engagement follows a proven four-phase process. No mystery, no scope creep—just
           clear milestones and tangible outcomes.
         </p>
@@ -110,7 +110,7 @@ export function HowWeWork() {
                       {step.title}
                     </h3>
                   </div>
-                  <p className="mt-2 dark:text-text-muted text-text-dark-muted">
+                  <p className="mt-2 text-text-dark-muted-readable dark:text-text-muted-readable">
                     {step.description}
                   </p>
                   <div className="mt-4">
@@ -121,7 +121,7 @@ export function HowWeWork() {
                       {step.deliverables.map((d) => (
                         <li
                           key={d}
-                          className="flex items-center gap-2 text-sm dark:text-text-muted text-text-dark-muted"
+                          className="flex items-center gap-2 text-sm text-text-dark-muted-readable dark:text-text-muted-readable"
                         >
                           <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gold" />
                           {d}

@@ -37,15 +37,6 @@ export function Hero() {
           animate="visible"
           className="max-w-4xl"
         >
-          {/* Credibility line */}
-          <motion.p
-            variants={prefersReduced ? undefined : item}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-sm font-medium text-gold"
-          >
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-gold" />
-            Built by a former staffing-tech operator turned software engineer
-          </motion.p>
-
           {/* Headline */}
           <motion.h1
             variants={prefersReduced ? undefined : item}

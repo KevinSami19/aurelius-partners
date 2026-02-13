@@ -17,8 +17,10 @@
   /* Text */
   --color-text-primary: #E6EAF2;
   --color-text-muted: #A7B0C0;
+  --color-text-muted-readable: #B8C4D0;
   --color-text-dark: #111827;
   --color-text-dark-muted: #4B5563;
+  --color-text-dark-muted-readable: #374151;
 
   /* Status */
   --color-success: #2FBF71;

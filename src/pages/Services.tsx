@@ -9,9 +9,7 @@ import {
   BookOpen,
   ChevronDown,
   ArrowRight,
-  Clock,
   Calendar,
-  LineChart,
   CheckCircle,
 } from 'lucide-react';
 import { SEO } from '@/components/seo/SEO';
@@ -106,63 +104,6 @@ const services = [
       'Adoption metrics and accountability framework',
     ],
     outcome: 'A team that runs the system, not the other way around.',
-  },
-];
-
-const packages = [
-  {
-    icon: Clock,
-    title: '14-Day Growth Diagnostic',
-    price: 'Fixed scope',
-    duration: '14 days',
-    description:
-      'A comprehensive audit of your pipeline, data, tech stack, and workflows. You get a prioritized roadmap with quick wins and long-term plays.',
-    includes: [
-      'Pipeline and conversion analysis',
-      'ATS/CRM data quality assessment',
-      'Tech stack evaluation',
-      'Workflow automation opportunities',
-      'Prioritized recommendations report',
-      '90-minute strategy debrief call',
-    ],
-    highlight: true,
-    cta: 'Book Your Diagnostic',
-  },
-  {
-    icon: Calendar,
-    title: 'Pipeline Sprint',
-    price: 'Fixed scope',
-    duration: '30 days',
-    description:
-      'In 30 days, we build and launch your outbound engine: ICP, sequences, CRM workflows, and a live pipeline dashboard.',
-    includes: [
-      'ICP definition and prospect targeting',
-      'Multi-channel outbound sequence design',
-      'CRM pipeline and workflow configuration',
-      'Live pipeline dashboard',
-      'Team training on outbound execution',
-      '30-day post-launch support',
-    ],
-    highlight: false,
-    cta: 'Start Your Sprint',
-  },
-  {
-    icon: LineChart,
-    title: 'Data-to-Decisions Dashboard',
-    price: 'Fixed scope',
-    duration: '21 days',
-    description:
-      'In 21 days, we clean your data, design your KPI framework, and deliver a live dashboard your team will actually use.',
-    includes: [
-      'Data audit and deduplication',
-      'KPI framework design',
-      'Custom dashboard build',
-      'Automated reporting setup',
-      'Team training and adoption plan',
-      '30-day support for refinements',
-    ],
-    highlight: false,
-    cta: 'Build Your Dashboard',
   },
 ];
 
@@ -272,76 +213,30 @@ export default function Services() {
         </motion.div>
       </Section>
 
-      {/* Packages */}
+      {/* Reach out CTA */}
       <Section dark>
-        <div className="text-center">
-          <SectionLabel>Packages</SectionLabel>
-          <SectionTitle className="mx-auto">Ready-to-launch packages</SectionTitle>
-          <SectionDescription>
-            Fixed scope, clear timelines, tangible outcomes. Pick the one that fits.
-          </SectionDescription>
-        </div>
-
         <motion.div
-          variants={prefersReduced ? undefined : staggerContainer}
+          variants={prefersReduced ? undefined : staggerItem}
           initial={prefersReduced ? undefined : 'hidden'}
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="mt-16 grid gap-8 lg:grid-cols-3"
         >
-          {packages.map((pkg) => (
-            <motion.div key={pkg.title} variants={prefersReduced ? undefined : staggerItem}>
-              <Card
-                glow
-                className={`flex h-full flex-col ${
-                  pkg.highlight ? 'border-gold/40 ring-1 ring-gold/20' : ''
-                }`}
-              >
-                {pkg.highlight && (
-                  <span className="mb-3 inline-block self-start rounded-full bg-gold/10 px-3 py-1 text-xs font-semibold text-gold">
-                    Most Popular
-                  </span>
-                )}
-                <div className="mb-3 inline-flex self-start rounded-lg bg-gold/10 p-3">
-                  <pkg.icon size={24} className="text-gold" />
-                </div>
-                <h3 className="text-xl font-bold dark:text-text-primary text-text-dark">
-                  {pkg.title}
-                </h3>
-                <div className="mt-2 flex items-center gap-3 text-sm">
-                  <span className="text-gold font-medium">{pkg.price}</span>
-                  <span className="dark:text-text-muted text-text-dark-muted">·</span>
-                  <span className="flex items-center gap-1 dark:text-text-muted text-text-dark-muted">
-                    <Clock size={14} /> {pkg.duration}
-                  </span>
-                </div>
-                <p className="mt-3 text-sm dark:text-text-muted text-text-dark-muted flex-1">
-                  {pkg.description}
-                </p>
-                <ul className="mt-4 space-y-2">
-                  {pkg.includes.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-2 text-sm dark:text-text-muted text-text-dark-muted"
-                    >
-                      <CheckCircle size={14} className="mt-0.5 flex-shrink-0 text-success" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  to="/contact"
-                  className={`mt-6 inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition-all ${
-                    pkg.highlight
-                      ? 'bg-gold text-obsidian hover:bg-gold-hover'
-                      : 'border border-gold/40 text-gold hover:bg-gold/10'
-                  }`}
-                >
-                  {pkg.cta} <ArrowRight size={14} />
-                </Link>
-              </Card>
-            </motion.div>
-          ))}
+          <Card glow className="border-gold/40 ring-1 ring-gold/20 text-center">
+            <SectionLabel>Get Started</SectionLabel>
+            <h2 className="mt-4 font-display text-2xl font-bold dark:text-text-primary text-text-dark sm:text-4xl">
+              Every engagement is custom
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-lg dark:text-text-muted text-text-dark-muted">
+              We don&apos;t do one-size-fits-all. Tell us where you are and what you need—we&apos;ll
+              design a plan that fits.
+            </p>
+            <Link
+              to="/contact"
+              className="mt-8 inline-flex items-center gap-2 rounded-lg bg-gold px-8 py-4 text-base font-semibold text-obsidian shadow-lg shadow-gold/20 transition-all hover:-translate-y-0.5 hover:bg-gold-hover"
+            >
+              Reach out to get started <ArrowRight size={18} />
+            </Link>
+          </Card>
         </motion.div>
       </Section>
 

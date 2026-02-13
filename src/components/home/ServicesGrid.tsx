@@ -9,9 +9,6 @@ import {
   BookOpen,
   ChevronDown,
   ArrowRight,
-  Clock,
-  Calendar,
-  LineChart,
 } from 'lucide-react';
 import { Section, SectionLabel, SectionTitle } from '@/components/ui/Section';
 import { Card } from '@/components/ui/Card';
@@ -78,33 +75,6 @@ const services = [
       'Recorded walkthroughs and quick-reference guides',
       'Quarterly refresh sessions',
     ],
-  },
-];
-
-const productized = [
-  {
-    icon: Clock,
-    title: '14-Day Growth Diagnostic',
-    description:
-      'A comprehensive audit of your pipeline, data, and tech stack. You get a prioritized roadmap with quick wins and long-term plays.',
-    duration: '14 days',
-    highlight: true,
-  },
-  {
-    icon: Calendar,
-    title: 'Pipeline Sprint',
-    description:
-      'In 30 days, we build and launch your outbound engine: ICP, sequences, CRM workflows, and a live pipeline dashboard.',
-    duration: '30 days',
-    highlight: false,
-  },
-  {
-    icon: LineChart,
-    title: 'Data-to-Decisions Dashboard',
-    description:
-      'In 21 days, we clean your data, design your KPI framework, and deliver a live dashboard your team will actually use.',
-    duration: '21 days',
-    highlight: false,
   },
 ];
 
@@ -191,57 +161,29 @@ export function ServicesGrid() {
         ))}
       </motion.div>
 
-      {/* Productized offers */}
+      {/* Reach out CTA */}
       <div className="mt-20">
-        <h3 className="text-center font-display text-2xl font-bold dark:text-text-primary text-text-dark sm:text-3xl">
-          Ready-to-launch packages
-        </h3>
-        <p className="mx-auto mt-3 max-w-xl text-center dark:text-text-muted text-text-dark-muted">
-          Fixed scope, clear timelines, tangible outcomes. Pick the one that fits your biggest need right now.
-        </p>
-
         <motion.div
-          variants={prefersReduced ? undefined : staggerContainer}
+          variants={prefersReduced ? undefined : staggerItem}
           initial={prefersReduced ? undefined : 'hidden'}
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="mt-10 grid gap-6 md:grid-cols-3"
         >
-          {productized.map((pkg) => (
-            <motion.div key={pkg.title} variants={prefersReduced ? undefined : staggerItem}>
-              <Card
-                glow
-                className={`h-full ${
-                  pkg.highlight ? 'border-gold/40 ring-1 ring-gold/20' : ''
-                }`}
-              >
-                {pkg.highlight && (
-                  <span className="mb-3 inline-block rounded-full bg-gold/10 px-3 py-1 text-xs font-semibold text-gold">
-                    Most Popular
-                  </span>
-                )}
-                <div className="mb-3 inline-flex rounded-lg bg-gold/10 p-3">
-                  <pkg.icon size={24} className="text-gold" />
-                </div>
-                <h4 className="text-lg font-semibold dark:text-text-primary text-text-dark">
-                  {pkg.title}
-                </h4>
-                <p className="mt-2 text-sm dark:text-text-muted text-text-dark-muted">
-                  {pkg.description}
-                </p>
-                <div className="mt-4 flex items-center gap-2 text-sm font-medium text-gold">
-                  <Clock size={14} />
-                  {pkg.duration}
-                </div>
-                <Link
-                  to="/contact"
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold transition-colors hover:text-gold-hover"
-                >
-                  Get started <ArrowRight size={14} />
-                </Link>
-              </Card>
-            </motion.div>
-          ))}
+          <Card glow className="border-gold/40 ring-1 ring-gold/20 text-center">
+            <h3 className="font-display text-2xl font-bold dark:text-text-primary text-text-dark sm:text-3xl">
+              Every engagement is custom
+            </h3>
+            <p className="mx-auto mt-4 max-w-xl text-base dark:text-text-muted text-text-dark-muted sm:text-lg">
+              We don&apos;t do one-size-fits-all. Tell us where you are and what you need—we&apos;ll
+              design a plan that fits.
+            </p>
+            <Link
+              to="/contact"
+              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-gold px-8 py-4 text-base font-semibold text-obsidian shadow-lg shadow-gold/20 transition-all hover:-translate-y-0.5 hover:bg-gold-hover hover:shadow-gold/30"
+            >
+              Reach out to get started <ArrowRight size={18} />
+            </Link>
+          </Card>
         </motion.div>
       </div>
     </Section>

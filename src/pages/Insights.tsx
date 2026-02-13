@@ -51,7 +51,7 @@ export default function Insights() {
               staffing growth.
             </span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg dark:text-text-muted text-text-dark-muted">
+          <p className="mt-6 max-w-2xl text-lg text-text-dark-muted-readable dark:text-text-muted-readable">
             Practical ideas on pipeline, data, automation, and strategy for staffing
             agency owners and operators.
           </p>
@@ -102,7 +102,7 @@ export default function Insights() {
         {/* Posts grid */}
         {filteredPosts.length === 0 ? (
           <div className="py-20 text-center">
-            <p className="text-lg dark:text-text-muted text-text-dark-muted">
+            <p className="text-lg text-text-dark-muted-readable dark:text-text-muted-readable">
               No posts match your search. Try different keywords or clear the filter.
             </p>
           </div>
@@ -130,11 +130,11 @@ export default function Insights() {
                     <h2 className="mt-3 text-lg font-semibold dark:text-text-primary text-text-dark line-clamp-2 flex-1">
                       {post.title}
                     </h2>
-                    <p className="mt-2 text-sm dark:text-text-muted text-text-dark-muted line-clamp-3">
+                    <p className="mt-2 text-sm text-text-dark-muted-readable dark:text-text-muted-readable line-clamp-3">
                       {post.description}
                     </p>
-                    <div className="mt-4 flex items-center justify-between pt-4 border-t border-steel/20 dark:border-steel/20 border-gray-100">
-                      <div className="flex items-center gap-3 text-xs dark:text-text-muted text-text-dark-muted">
+                      <div className="mt-4 flex items-center justify-between pt-4 border-t border-steel/20 dark:border-steel/20 border-gray-100">
+                      <div className="flex items-center gap-3 text-xs text-text-dark-muted-readable dark:text-text-muted-readable">
                         <span className="flex items-center gap-1">
                           <Calendar size={12} /> {post.date}
                         </span>
