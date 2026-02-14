@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { TrendingUp, ArrowRight, Calendar, Users, BarChart3, Zap } from 'lucide-react';
 import { SEO } from '@/components/seo/SEO';
 import { Section, SectionLabel } from '@/components/ui/Section';
+import { brand } from '@/config/brand';
 import { GradientMesh } from '@/components/ui/GradientMesh';
 import { staggerContainer, staggerItem } from '@/lib/animations';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
@@ -71,7 +72,7 @@ export default function CaseStudies() {
     <>
       <SEO
         title="Case Studies"
-        description="See how staffing agencies doubled pipeline, cut time-to-fill, and modernized operations with Aurelius Partners."
+        description={`See how staffing agencies doubled pipeline, cut time-to-fill, and modernized operations with ${brand.name}.`}
         path="/case-studies"
       />
 

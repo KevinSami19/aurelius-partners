@@ -1,3 +1,5 @@
+import { brand } from '@/config/brand';
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -17,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     description:
       'Most staffing agencies sit on years of ATS data that should be a competitive advantage. Instead, it\'s a graveyard of duplicates, stale records, and unreliable reports. Here\'s how to fix it.',
     tags: ['Data', 'ATS', 'Operations'],
-    author: 'Aurelius Partners',
+    author: brand.name,
     readTime: '7 min read',
     content: `
 ## The Hidden Cost of Dirty Data
@@ -62,7 +64,7 @@ The agencies that treat data as infrastructure—not an afterthought—consisten
     description:
       'Outbound for staffing agencies has a bad reputation—and often deserves it. But a well-built outbound system is personal, data-driven, and respectful. Here\'s how to build one.',
     tags: ['Pipeline', 'Sales', 'Growth'],
-    author: 'Aurelius Partners',
+    author: brand.name,
     readTime: '8 min read',
     content: `
 ## The Outbound Problem in Staffing
@@ -120,7 +122,7 @@ If you can't answer that, don't send the message. Your brand is worth more than 
     description:
       'AI in staffing isn\'t about replacing recruiters. It\'s about giving them superpowers. Here\'s a phased approach to implementing AI and automation that actually works.',
     tags: ['AI', 'Automation', 'Strategy'],
-    author: 'Aurelius Partners',
+    author: brand.name,
     readTime: '9 min read',
     content: `
 ## AI Is Not Going to Replace Your Recruiters

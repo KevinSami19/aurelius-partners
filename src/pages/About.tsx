@@ -47,9 +47,9 @@ const journey = [
   {
     icon: Lightbulb,
     period: 'Chapter 3',
-    title: 'Founding Aurelius Partners',
+    title: `Founding ${brand.name}`,
     description:
-      'Saw that small-to-mid staffing agencies face the same problems that enterprise firms do—but without dedicated technology teams to solve them. Founded Aurelius Partners to be that team.',
+      `Saw that small-to-mid staffing agencies face the same problems that enterprise firms do—but without dedicated technology teams to solve them. Founded ${brand.name} to be that team.`,
     highlights: [
       'Bringing enterprise-grade thinking to agencies that can\'t afford enterprise budgets',
       'Every engagement is hands-on: building, not just advising',
@@ -89,7 +89,7 @@ export default function About() {
     <>
       <SEO
         title="About"
-        description="Aurelius Partners was founded by a hands-on staffing-tech operator and software engineer who understands the staffing industry from the inside."
+        description={`${brand.name} was founded by a hands-on staffing-tech operator and software engineer who understands the staffing industry from the inside.`}
         path="/about"
       />
 

@@ -74,7 +74,7 @@ export default function Contact() {
     <>
       <SEO
         title="Contact"
-        description="Book a free growth diagnostic or get in touch with Aurelius Partners. Let's talk about turning your staffing operations into a growth system."
+        description={`Book a free growth diagnostic or get in touch with ${brand.name}. Let's talk about turning your staffing operations into a growth system.`}
         path="/contact"
       />
 

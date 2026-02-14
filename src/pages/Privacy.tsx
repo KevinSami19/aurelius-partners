@@ -6,7 +6,7 @@ import { brand } from '@/config/brand';
 export default function Privacy() {
   return (
     <>
-      <SEO title="Privacy Policy" description="Privacy policy for Aurelius Partners." path="/privacy" />
+      <SEO title="Privacy Policy" description={`Privacy policy for ${brand.name}.`} path="/privacy" />
 
       <section className="relative overflow-hidden py-20 md:py-28">
         <GradientMesh />

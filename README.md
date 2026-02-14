@@ -1,8 +1,8 @@
-# Aurelius Partners — Marketing Website
+# Zal Partners — Marketing Website
 
 > Strength through clarity.
 
-A modern, conversion-first marketing website for **Aurelius Partners**, a boutique consulting firm that helps small-to-mid staffing agencies grow pipeline, clean up noisy data, and adopt AI/automation while keeping a human touch.
+A modern, conversion-first marketing website for **Zal Partners**, a boutique consulting firm that helps small-to-mid staffing agencies grow pipeline, clean up noisy data, and adopt AI/automation while keeping a human touch.
 
 ## Tech Stack
 
@@ -38,7 +38,7 @@ npm test
 ## Project Structure
 
 ```
-aurelius-site/
+zal-partners-site/
 ├── .github/workflows/deploy.yml   # GitHub Pages deployment
 ├── public/
 │   ├── favicon.svg
@@ -84,9 +84,9 @@ All brand settings are in `src/config/brand.ts`. Environment variables (set in `
 
 ```env
 # Contact & scheduling
-VITE_CONTACT_EMAIL=hello@aureliuspartners.com
-VITE_LINKEDIN_URL=https://linkedin.com/company/aurelius-partners
-VITE_SCHEDULER_URL=https://calendly.com/aurelius-partners
+VITE_CONTACT_EMAIL=hello@zalpartners.com
+VITE_LINKEDIN_URL=https://linkedin.com/company/zal-partners
+VITE_SCHEDULER_URL=https://calendly.com/zal-partners
 
 # Form submission (Formspree)
 VITE_FORMSPREE_URL=https://formspree.io/f/YOUR_FORM_ID
@@ -95,7 +95,7 @@ VITE_FORMSPREE_URL=https://formspree.io/f/YOUR_FORM_ID
 VITE_ANALYTICS_ID=
 
 # Site URL (for OG tags)
-VITE_SITE_URL=https://aureliuspartners.com
+VITE_SITE_URL=https://zalpartners.com
 ```
 
 ## Brand Customization
@@ -110,22 +110,22 @@ VITE_SITE_URL=https://aureliuspartners.com
 
 ### Setup
 
-1. Create a new GitHub repo named **aurelius-partners** (or push this code into it)
+1. Create a new GitHub repo named **zal-partners** (or push this code into it)
 2. Push this repo to GitHub
 3. Go to **Settings → Pages → Source** and select **GitHub Actions**
 4. The workflow runs automatically on push to `main`
 
-**Your live URL:** `https://kevinsami19.github.io/aurelius-partners/`
+**Your live URL:** `https://kevinsami19.github.io/zal-partners/`
 
 ### How It Works
 
-- **Base path**: Automatically set via `VITE_BASE` env var in the workflow (`/aurelius-partners/`)
+- **Base path**: Automatically set via `VITE_BASE` env var in the workflow (`/zal-partners/`)
 - **SPA routing**: The postbuild script copies `index.html` → `404.html` so that deep links (e.g., `/services`, `/about`) work on GitHub Pages
 - **Local dev**: Uses `/` as base path (no repo prefix needed)
 
 ### Custom Domain
 
-If using a custom domain (e.g., `aureliuspartners.com`):
+If using a custom domain (e.g., `zalpartners.com`):
 1. Add a `CNAME` file to `public/` with your domain
 2. Set `VITE_BASE=/` in the workflow (remove the repo name prefix)
 3. Configure DNS per [GitHub's docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)

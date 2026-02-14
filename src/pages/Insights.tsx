@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Search, Calendar, ArrowRight, Clock } from 'lucide-react';
 import { SEO } from '@/components/seo/SEO';
+import { brand } from '@/config/brand';
 import { Section, SectionLabel } from '@/components/ui/Section';
 import { Card } from '@/components/ui/Card';
 import { GradientMesh } from '@/components/ui/GradientMesh';
@@ -36,7 +37,7 @@ export default function Insights() {
     <>
       <SEO
         title="Insights"
-        description="Practical insights on staffing growth, recruitment analytics, pipeline development, and automation from Aurelius Partners."
+        description={`Practical insights on staffing growth, recruitment analytics, pipeline development, and automation from ${brand.name}.`}
         path="/insights"
       />
 

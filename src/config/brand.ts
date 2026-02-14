@@ -1,5 +1,5 @@
 export const brand = {
-  name: 'Aurelius Partners',
+  name: import.meta.env.VITE_APP_NAME || 'Zal Partners',
   tagline: 'Strength through clarity.',
   location: 'DMV (DC/MD/VA), Serving Nationwide',
   contactEmail: import.meta.env.VITE_CONTACT_EMAIL || '[[CONTACT_EMAIL]]',
@@ -9,8 +9,8 @@ export const brand = {
   formspreeEndpoint:
     import.meta.env.VITE_FORMSPREE_URL || 'https://formspree.io/f/[[FORM_ID]]',
   analyticsId: import.meta.env.VITE_ANALYTICS_ID || '',
-  siteUrl: import.meta.env.VITE_SITE_URL || 'https://aureliuspartners.com',
-  domain: 'aureliuspartners.com',
+  siteUrl: import.meta.env.VITE_SITE_URL || 'https://zalpartners.com',
+  domain: 'zalpartners.com',
 } as const;
 
 export const colors = {

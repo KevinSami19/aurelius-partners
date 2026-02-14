@@ -3,6 +3,7 @@ import { render, screen, within } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import App from '../App';
+import { brand } from '@/config/brand';
 
 function renderWithProviders(initialRoute = '/') {
   return render(
@@ -17,7 +18,7 @@ function renderWithProviders(initialRoute = '/') {
 describe('App', () => {
   it('renders the home page with brand name', async () => {
     renderWithProviders('/');
-    const brandLinks = await screen.findAllByText(/Aurelius Partners/i);
+    const brandLinks = await screen.findAllByText(new RegExp(brand.name, 'i'));
     expect(brandLinks.length).toBeGreaterThan(0);
   });
 

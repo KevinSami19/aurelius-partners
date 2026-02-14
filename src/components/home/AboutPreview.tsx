@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Code2, Database, Users } from 'lucide-react';
 import { Section, SectionLabel, SectionTitle } from '@/components/ui/Section';
+import { brand } from '@/config/brand';
 
 export function AboutPreview() {
   return (
@@ -13,7 +14,7 @@ export function AboutPreview() {
           </SectionTitle>
           <div className="mt-6 space-y-4 dark:text-text-muted text-text-dark-muted leading-relaxed">
             <p>
-              Aurelius Partners was founded by a hands-on operator and builder who spent years
+              {brand.name} was founded by a hands-on operator and builder who spent years
               inside one of the largest staffing firms in the world—not in a corner office,
               but deep in the data and systems that power recruiting operations.
             </p>
